@@ -4,6 +4,8 @@
   const essentials = ['Knife or Multitool', 'Firestarter and Matches', 'Map', 'Compass', 'First Aid Kit', 'Flashlight', 'Sun Protection (hat, sunglasses, sunscreen)', 'Whistle', 'Extra Clothing (hat, gloves, socks, underwear)', 'Extra Food (Energy Bar or Gel)'];
 
   let totalTrips = [];
+  let tripName = '';
+  let finalItems = [];
 
   if (localStorage.totalTrips) {
     totalTrips = JSON.parse(localStorage.totalTrips);
@@ -78,15 +80,25 @@
   ];
 
   function populateList() {
-    iconSets.forEach(function() {
-
+    tripName = $('#tripName').val();
+    $('#nameEl').text(tripName);
+    finalItems = finalItems.concat(essentials);
+    iconSets.forEach(function(set) {
+      set.icons.forEach(function(icon) {
+        if (icon.active) {
+          finalItems = finalItems.concat(icon.activityItems);
+        }
+      });
+    });
+    finalItems.forEach(function(item) {
+      $('#loadList').append('<li>' + item + '</li>');
     });
   }
 
   function hasSelectedOptions() {
     for (let i = 0;i < iconSets.length;i++) {
       if (!iconSets[i].hasOneSelected())
-      return false;
+        return false;
     }
     return true;
   }
@@ -116,6 +128,12 @@
   }
 
   $('#saveButton').on('click', function() {
+    var newTrip = new Trip(tripName, finalItems, '', '', '');
+    totalTrips.push(newTrip);
+    localStorage.totalTrips = JSON.stringify(totalTrips);
+  });
+
+  $('#clearList').on('click', function() {
     location.reload(false);
   });
 

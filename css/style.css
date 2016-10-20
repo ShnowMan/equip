@@ -315,3 +315,13 @@ form {
 #footer {
   flex-direction: row;
 }
+
+#nameEl {
+  text-align: center;
+}
+
+#listTitle * {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
