@@ -6,7 +6,7 @@ var iconHike, iconMount, iconSnowboard, iconSki, iconCamp, iconSunny, iconRainy,
 var active = document.getElementById('activities');
 var weath = document.getElementById('weather');
 var dur = document.getElementById('duration');
-// ITEMS ARRAY
+// ITEMS ARRA
 var activityItems = [
   ['Hiking Shoes/Boots', '1 Pair of Socks', '1 Pair of Underwear', '1 Shirt/Long­sleeve Shirt', '1 Pair of Shorts/Pants', '30-­40 Liter Backpack', 'Water Bottles', 'Swimsuit (if hiking to a lake)'],
   ['Mountaineering Boots', 'Crampons', 'Ice Axe or Ice Tools', 'Helmet', 'Dry­treated Single Rope (30­-60 meters) (if protecting any pitches or roping up for glacier travel)', 'Harness', 'Pickets', 'Crevasse Rescue Kit (if crossing a glacier)', 'Light Alpine Climbing Rack (if climbing any rock)', 'Gaiters', 'Glacier Sunglasses or Goggles', 'GPS (recommended)', 'Emergency Locator Beacon (recommended)'],
