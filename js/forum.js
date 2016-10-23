@@ -3,13 +3,19 @@
 var tripsArray = [];
 var where, details, wish;
 // TAKES INFO FROM LOCAL STORAGE
+// function checkLS() {
+//   if (localStorage.totalTrips) {
+//     var z = localStorage.getItem('totalTrips');
+//     var a = JSON.parse(z);
+//     tripsArray = a;
+//   }
+// };
 function checkLS() {
-  if (localStorage.totalTrips) {
-    var z = localStorage.getItem('totalTrips');
-    var a = JSON.parse(z);
-    tripsArray = a;
+  if (localStorage.totalTrips){
+    tripsArray = JSON.parse(localStorage.getItem('totalTrips'));
   }
 };
+
 checkLS();
 // INPUT NAMES TO DROPDOWN
 function dropInput() {
@@ -21,6 +27,15 @@ function dropInput() {
     dropDown.appendChild(dropNames);
   }
 };
+function dropInput() {
+  tripsArray.forEach(function(i){
+    $('#dropdown').append('<option>' + i.names + '</option>')
+
+  })
+};
+
+
+
 dropInput();
 // CREATE DROP LIST
 function createDropList() {
