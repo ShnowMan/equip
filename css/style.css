@@ -121,7 +121,7 @@ div#slider figure {
   flex-direction: column;
 }
 
-#activities, #weather, #duration {
+#set0, #set1, #set2 {
   display: flex;
   justify-content: center;
 }
@@ -314,4 +314,14 @@ form {
 
 #footer {
   flex-direction: row;
+}
+
+#nameEl {
+  text-align: center;
+}
+
+#listTitle * {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }

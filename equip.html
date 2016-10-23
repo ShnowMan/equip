@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Equip Yourself</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <header><img id="headerLogo" src="img/branding/equiplogo.png"/></header>
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="equip.html">EQUIP</a></li>
-        <li><a href="triplog.html">LISTS</a></li>
-        <li><a href="resources.html">RESOURCES</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Equip Yourself</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header><img id="headerLogo" src="img/branding/equiplogo.png"/></header>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="equip.html">EQUIP</a></li>
+      <li><a href="triplog.html">LISTS</a></li>
+      <li><a href="resources.html">RESOURCES</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+    </ul>
+  </nav>
 
-    <form id="bigFlex" action="equip.html" method="post">
+  <form id="bigFlex" action="equip.html" method="post">
     <section id="equipContent">
       <section id="tripNames">
-        <input id="tripName" placeholder="Name Your List" type="text" id="n1" name="tripLogName" required="required" >
+        <input id="tripName" placeholder="Name of your trip list" type="text" id="n1" name="tripLogName" required="required" >
       </section>
-    <section id="iconSection">
-      <article id="activities">
-        <img class="icons" id="hiking" title="Hiking"/>
-        <img class="icons" id="mountaineering" title="Mountaineering"/>
-        <img class="icons" id="backcountrySnowboarding" title="Backcountry Snowboarding"/>
-        <img class="icons" id="backcountrySkiing" title="Backcountry Skiing"/>
-        <img class="icons" id="carCamping" title="Car Camping"/>
-      </article>
+      <section id="iconSection">
+        <article class='iconset' id="set0">
+          <img class="icons" id="hike" title="Hiking"/>
+          <img class="icons" id="mountain" title="Mountaineering"/>
+          <img class="icons" id="snowboard" title="Backcountry Snowboarding"/>
+          <img class="icons" id="ski" title="Backcountry Skiing"/>
+          <img class="icons" id="car" title="Car Camping"/>
+        </article>
 
-      <article id="weather">
-        <img class="icons" id="sunny" title="Sunny"/>
-        <img class="icons" id="rainy"/ title="Rainy">
-        <img class="icons" id="cloudy" title="Cloudy"/>
-        <img class="icons" id="snowy"/ title="Snowy">
-      </article>
+        <article class='iconset' id="set1">
+          <img class="icons" id="sunny" title="Sunny"/>
+          <img class="icons" id="rainy"/ title="Rainy">
+          <img class="icons" id="cloudy" title="Cloudy"/>
+          <img class="icons" id="snowy"/ title="Snowy">
+        </article>
 
-      <article id="duration">
-        <img class="icons" id="lessThanOne" title="Day Trip"/>
-        <img class="icons" id="twoThree" title="1-2 Nights"/>
-        <img class="icons" id="threePlus" title="3+ Nights"/>
-      </article>
-    </section>
+        <article class='iconset' id="set2">
+          <img class="icons" id="one" title="Day Trip"/>
+          <img class="icons" id="two" title="1-2 Nights"/>
+          <img class="icons" id="three" title="3+ Nights"/>
+        </article>
+      </section>
       <section id="buttonList">
         <article>
-          <h3 id="nameEl"></h3>
           <button class="buttons" id="results" type="submit" name="button">EQUIP ME</button>
         </article>
-        <!-- <article>
-          <a href="javascript:location.reload(true)"><button class="buttons" id="lsClear" type="button" name="button">RESET ALL LISTS</button></a>
-        </article> -->
       </section>
     </section>
+  </form>
 
-      <section id="finalList">
-        <ul type="checkbox" id="loadList"></ul>
-      </section>
-    </form>
+  <section id='listTitle'>
+    <h3 id="nameEl"></h3>
+    <ul type="checkbox" id="loadList"></ul>
+  </section>
 
-    <section id="buttonSection">
-      <article class="cButton">
-        <button hidden class="buttons" id="clearList">RESET</button>
-      </article>
-      <article class="sButton">
-        <a href="resources.html"><button hidden class="buttons" id="saveButton" type="button">SAVE LIST</button></a>
-      </article>
-    </section>
+  <section id="buttonSection">
+    <article class="cButton">
+      <button hidden class="buttons" id="clearList">RESET</button>
+    </article>
+    <article class="sButton">
+      <a href="resources.html"><button hidden class="buttons" id="saveButton" type="button">SAVE LIST</button></a>
+    </article>
+  </section>
 
-    <script type="text/javascript" src="js/app.js"></script>
-    <!-- <footer id="footer">Equip Education &copy; Copyright, 2016</footer> -->
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
 </html>
